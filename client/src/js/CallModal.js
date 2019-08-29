@@ -5,14 +5,17 @@ import classnames from 'classnames';
 
 
 function CallModal({ status, callFrom, startCall, rejectCall}) {
+  
+  if(status == 'active') {
   var audio = new Audio('https://www.w3schools.com/tags/horse.mp3');
-   
+    audio.play();
+  }
                  
   
    const acceptWithVideo = (video) => {
     const config = { audio: true, video , audio};
     
-    return () => startCall(audio.play() , false , callFrom, config);
+    return () => startCall( false , callFrom, config);
     
   
    };
