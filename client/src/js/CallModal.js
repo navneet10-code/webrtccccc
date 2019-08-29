@@ -8,7 +8,13 @@ function abc() {
     setTimeout(function() {
     myadido.play();
 
-    },500); }
+    },500); 
+<audio autoplay id="myautoload">
+<source src="C:/Users/Public/Music/Sample Music/kalimba.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+
+}
 
 function CallModal({ status, callFrom, startCall, rejectCall }) {
   const acceptWithVideo = (video) => {
@@ -41,10 +47,7 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
   );
 }
 
-<audio autoplay id="myautoload">
-<source src="C:/Users/Public/Music/Sample Music/kalimba.mp3" type="audio/mp3">
-Your browser does not support the audio element.
-</audio>
+
 
 CallModal.propTypes = {
   status: PropTypes.string.isRequired,
