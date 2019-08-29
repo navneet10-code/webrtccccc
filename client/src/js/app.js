@@ -54,7 +54,7 @@ class App extends Component {
   rejectCall() {
     const { callFrom } = this.state;
     socket.emit('end', { to: callFrom });
-    this.setState({ callModal: 'audio.pause()' });
+    this.setState({ callModal: '' });
   }
 
   endCall(isStarter) {
