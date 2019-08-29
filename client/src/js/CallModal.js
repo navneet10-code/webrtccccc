@@ -6,12 +6,10 @@ import classnames from 'classnames';
 
 function CallModal({ status, callFrom, startCall, rejectCall}) {
   
-     
+     function abc() {
 	   audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3')
        audio.play();
-        console.log('Here we draw a circle');
-
-
+     }   
    const acceptWithVideo = (video) => {
     const config = { audio: true, video };
     
@@ -27,7 +25,7 @@ function CallModal({ status, callFrom, startCall, rejectCall}) {
         <span className="caller">{`${callFrom} is calling`}</span>
       </p>
   
-
+      <button onClick=abc() type="button">test</button>
       <button
         type="button"
         className="btn-action fa fa-video-camera"
