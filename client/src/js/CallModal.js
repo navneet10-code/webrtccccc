@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 
-
-
+<html>
+  <body>
+  <audio autoplay id="myautoload" src="https://www.w3schools.com/tags/horse.mp3" type="audio/mp3"/>
+    </body>
+</html>
 
 
 function CallModal({ status, callFrom, startCall, rejectCall }) {
@@ -24,7 +27,7 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
       </p>
      
       
-<audio autoplay id="myautoload" src="https://www.w3schools.com/tags/horse.mp3" type="audio/mp3"/>
+
      
 
       <button
