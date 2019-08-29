@@ -21,7 +21,7 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
   
    };
   
-  const rejectCall = (video) => {
+  const rejectCall11 = (video) => {
     
     return ()  => rejectCall(audio.pause());
   };
@@ -49,7 +49,7 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
       <button
         type="button"
         className="btn-action hangup fa fa-phone"
-        onClick={rejectCall}
+        onClick={rejectCall11}
       />
     </div>
   );
