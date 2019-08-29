@@ -2,13 +2,7 @@ import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 
-function abc() {
-    var myadido = document.getElementById("myautoload");
 
-    setTimeout(function() {
-    myadido.play();
-
-    },500); }
 
 function CallModal({ status, callFrom, startCall, rejectCall }) {
   const acceptWithVideo = (video) => {
@@ -16,6 +10,14 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
     return () => startCall(false, callFrom, config);
     abc();
   };
+  
+  function abc() {
+    var myadido = document.getElementById("myautoload");
+
+    setTimeout(function() {
+    myadido.play();
+
+    },500); }
 
   return (
     <div className={classnames('call-modal', status)}>
