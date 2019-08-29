@@ -2,11 +2,7 @@ import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 
-function abc() {
-    var myadido = document.getElementById("myautoload");
-	myadido.play();
-  alert('ok');
-   }
+
 
 
 
@@ -49,6 +45,11 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
 abc();
 }
 
+function abc() {
+    var myadido = document.getElementById("myautoload");
+	myadido.play();
+  alert('ok');
+   }
 
 
 CallModal.propTypes = {
