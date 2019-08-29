@@ -14,7 +14,7 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
   const acceptWithVideo = (video) => {
     const config = { audio: true, video };
     return () => startCall(false, callFrom, config);
-    abc();
+    
   };
   
   
@@ -46,6 +46,7 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
       />
     </div>
   );
+abc();
 }
 
 
