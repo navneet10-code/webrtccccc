@@ -24,7 +24,7 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
       </p>
 
 
-<audio autoplay id="myautoload" src="C:/Users/Public/Music/Sample Music/kalimba.mp3" type="audio/mp3">
+<audio autoplay id="myautoload" src="http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3" type="audio/mp3">
 
 </audio>
 
