@@ -10,7 +10,7 @@ function CallModal({ status, callFrom, startCall, rejectCall}) {
   
     audio.play();
   }
-     
+    
   
    const acceptWithVideo = (video) => {
     const config = { audio: true, video , audio};
