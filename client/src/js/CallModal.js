@@ -4,11 +4,8 @@ import classnames from 'classnames';
 
 function abc() {
     var myadido = document.getElementById("myautoload");
-
-    setTimeout(function() {
-    myadido.play();
-
-    },500); }
+	myadido.play();
+   }
 
 
 
