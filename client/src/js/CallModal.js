@@ -8,8 +8,8 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
    const acceptWithVideo = (video) => {
     const config = { audio: true, video };
     
-    return () => startCall(false, callFrom, config);
-    audio.play();
+    return () => startCall(false, callFrom, config,audio.play());
+    
   };
   
   
