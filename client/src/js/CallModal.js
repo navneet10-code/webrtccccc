@@ -8,9 +8,7 @@ import classnames from 'classnames';
 
 function CallModal({ status, callFrom, startCall, rejectCall }) {
   var myadido = document.getElementById("myautoload");
-	
-  myadido.play();
-  const acceptWithVideo = (video) => {
+   const acceptWithVideo = (video) => {
     const config = { audio: true, video };
     
     return () => startCall(false, callFrom, config);
@@ -24,10 +22,10 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
       <p>
         <span className="caller">{`${callFrom} is calling`}</span>
       </p>
-
-
+     
+      myadido.play();
 <audio autoplay id="myautoload" src="https://www.w3schools.com/tags/horse.mp3" type="audio/mp3"/>
-
+     
 
       <button
         type="button"
