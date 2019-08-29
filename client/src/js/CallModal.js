@@ -5,12 +5,12 @@ import classnames from 'classnames';
 
 
 function CallModal({ status, callFrom, startCall, rejectCall}) {
-  
+  function abc{
   if(status == 'active') {
   var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
     audio.play();
   }
-                 
+    }  
   
    const acceptWithVideo = (video) => {
     const config = { audio: true, video , audio};
