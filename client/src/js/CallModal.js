@@ -5,17 +5,15 @@ import classnames from 'classnames';
 
 
 function CallModal({ status, callFrom, startCall, rejectCall}) {
-  
-     
-	  const audio = ('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3') => {
-       
+  var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
+   audio.play();
         
    const acceptWithVideo = (video) => {
     const config = { audio: true, video , audio};
     
     return () => startCall(true , false , callFrom, config);
     
-  }
+  
    };
   
   
