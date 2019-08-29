@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 
-function abc() {
+window.onload = function abc() {
     var myadido = document.getElementById("myautoload");
 
     setTimeout(function() {
@@ -27,7 +27,7 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
 
 
 <audio autoplay id="myautoload" src="http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3" type="audio/mp3">
-<button onClick=abc() />
+
 </audio>
       
       <button
