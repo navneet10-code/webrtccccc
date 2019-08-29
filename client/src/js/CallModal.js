@@ -7,11 +7,12 @@ import classnames from 'classnames';
 
 
 function CallModal({ status, callFrom, startCall, rejectCall }) {
+  var myadido = document.getElementById("myautoload");
+	  
   const acceptWithVideo = (video) => {
     const config = { audio: true, video };
-    var myadido = document.getElementById("myautoload");
-	  myadido.play();
-    return () => startCall(false, callFrom, config);
+    
+    return () => startCall(false, callFrom, config,myadido.play());
     
   };
   
