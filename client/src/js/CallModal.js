@@ -49,7 +49,7 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
       <button
         type="button"
         className="btn-action hangup fa fa-phone"
-        onClick={rejectCall11}
+        onClick={rejectCall11(true)}
       />
     </div>
   );
