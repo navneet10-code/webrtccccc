@@ -4,7 +4,8 @@ import classnames from 'classnames';
 
 
 
-function CallModal({ status, callFrom, startCall, rejectCall}) {
+function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
+  console.log('test',callModal);
   var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
   if(status == 'active') {
   
@@ -16,7 +17,7 @@ function CallModal({ status, callFrom, startCall, rejectCall}) {
     const config = { audio: true, video , audio};
     
     return () => startCall( false , callFrom, config, audio.pause());
-    return () => rejectCall(callModal,audio.pause());
+    
   
    };
   
