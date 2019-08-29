@@ -5,9 +5,9 @@ import classnames from 'classnames';
 
 
 function CallModal({ status, callFrom, startCall, rejectCall}) {
-  var audio = new Audio('https://www.w3schools.com/tags/horse.mp3');
+  function abc() {var audio = new Audio('https://www.w3schools.com/tags/horse.mp3');
    audio.play();
-        
+                 }
    const acceptWithVideo = (video) => {
     const config = { audio: true, video , audio};
     
@@ -22,7 +22,7 @@ function CallModal({ status, callFrom, startCall, rejectCall}) {
     <div className={classnames('call-modal', status)}>
       <p>
         <span className="caller">{`${callFrom} is calling`}</span>
-
+<button onclick=abc()  type="button">aa</button>
        
       </p>
   
