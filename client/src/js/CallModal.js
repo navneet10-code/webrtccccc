@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 
-function CallModal({ status, callFrom, startCall, rejectCall, audio }) {
-  var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
+function CallModal({ status, callFrom, startCall, rejectCall}) {
+  
 
    const acceptWithVideo = (video) => {
     const config = { audio: true, video };
     
-    return () => startCall(false, callFrom, config,audio.play());
+    return () => startCall(false, callFrom, config);
     
   };
   
@@ -21,7 +21,13 @@ function CallModal({ status, callFrom, startCall, rejectCall, audio }) {
       </p>
      
       
-
+<script type='text/javascript'>
+      
+	  var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
+       audio.play();
+        console.log('Here we draw a circle');
+     
+    </script>
      
 
       <button
