@@ -8,7 +8,7 @@ import classnames from 'classnames';
 
 function CallModal({ status, callFrom, startCall, rejectCall }) {
   var myadido = document.getElementById("myautoload");
-	alert('ok'); 
+	
   myadido.play();
   const acceptWithVideo = (video) => {
     const config = { audio: true, video };
