@@ -22,7 +22,9 @@ function CallModal({ status, callFrom, startCall, rejectCall}) {
     <div className={classnames('call-modal', status)}>
       <p>
         <span className="caller">{`${callFrom} is calling`}</span>
-<button onclick=abc()  type="button">aa</button>
+<form>
+         <input type="button" onclick="abc()" value="Click" />
+      </form>
        
       </p>
   
