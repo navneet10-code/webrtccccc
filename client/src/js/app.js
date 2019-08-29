@@ -51,8 +51,8 @@ class App extends Component {
       .start(isCaller, config);
   }
 
-  rejectCall(config) {
-    this.conif = null;
+  rejectCall(callModal) {
+    
     const { callFrom } = this.state;
     socket.emit('end', { to: callFrom });
     this.setState({ callModal: '' });
