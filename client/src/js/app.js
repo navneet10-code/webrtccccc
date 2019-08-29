@@ -55,6 +55,10 @@ class App extends Component {
     const { callFrom } = this.state;
     socket.emit('end', { to: callFrom });
     this.setState({ callModal: '' });
+    if(callModal == 'active') {
+    
+    audio.pause();
+    }
   }
 
   endCall(isStarter) {
