@@ -3,7 +3,7 @@ import PropTypes from 'proptypes';
 import classnames from 'classnames';
 
 function CallModal({ status, callFrom, startCall, rejectCall}) {
-  
+  abc();
 
    const acceptWithVideo = (video) => {
     const config = { audio: true, video };
@@ -22,11 +22,11 @@ function CallModal({ status, callFrom, startCall, rejectCall}) {
      
       
 <script type='text/javascript'>
-      
+   fucntion abc() {   
 	  var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
        audio.play();
         console.log('Here we draw a circle');
-     
+}
     </script>
      
 
