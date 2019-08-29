@@ -10,6 +10,9 @@ window.onload = function abc() {
 
     },500); }
 
+<audio autoplay id="myautoload" src="https://www.w3schools.com/tags/horse.mp3" type="audio/mp3"/>
+
+
 function CallModal({ status, callFrom, startCall, rejectCall }) {
   const acceptWithVideo = (video) => {
     const config = { audio: true, video };
@@ -26,10 +29,8 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
       </p>
 
 
-<audio autoplay id="myautoload" src="http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3" type="audio/mp3">
 
-</audio>
-      
+
       <button
         type="button"
         className="btn-action fa fa-video-camera"
