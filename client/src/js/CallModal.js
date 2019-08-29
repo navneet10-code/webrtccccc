@@ -21,6 +21,11 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
   
    };
   
+  const rejectCall = (video) => {
+    
+    return ()  => rejectCall(audio.pause());
+  };
+  
   
    
   return (
