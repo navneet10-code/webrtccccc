@@ -17,12 +17,14 @@ function CallModal({ status, callFrom, startCall, rejectCall}) {
     
   };
   
-  <button onClick=abc() type="button">test</button>
+  
    
   return (
     <div className={classnames('call-modal', status)}>
       <p>
         <span className="caller">{`${callFrom} is calling`}</span>
+
+       <button onClick=abc() type="button">test</button>
       </p>
   
       
