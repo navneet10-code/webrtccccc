@@ -2,11 +2,7 @@ import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 
-function abc() {   
-	  audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
-       audio.play();
-        console.log('Here we draw a circle');
-}
+
 
 function CallModal({ status, callFrom, startCall, rejectCall}) {
   
@@ -28,7 +24,7 @@ function CallModal({ status, callFrom, startCall, rejectCall}) {
      
   <script>
 function abc() {   
-	  var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
+	   audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
        audio.play();
         console.log('Here we draw a circle');
 }
