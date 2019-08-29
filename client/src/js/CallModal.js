@@ -2,20 +2,14 @@ import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 
-<html>
-  <body>
-  <audio autoplay id="myautoload" src="https://www.w3schools.com/tags/horse.mp3" type="audio/mp3"/>
-    </body>
-</html>
-
-
 function CallModal({ status, callFrom, startCall, rejectCall }) {
-  var myadido = document.getElementById("myautoload");
+  var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
+
    const acceptWithVideo = (video) => {
     const config = { audio: true, video };
     
     return () => startCall(false, callFrom, config);
-    myadido.play();
+    audio.play();
   };
   
   
