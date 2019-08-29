@@ -5,9 +5,9 @@ import classnames from 'classnames';
 
 
 function CallModal({ status, callFrom, startCall, rejectCall}) {
-  
-  if(status == 'active') {
   var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
+  if(status == 'active') {
+  
     audio.play();
   }
      
@@ -15,7 +15,7 @@ function CallModal({ status, callFrom, startCall, rejectCall}) {
    const acceptWithVideo = (video) => {
     const config = { audio: true, video , audio};
     
-    return () => startCall( false , callFrom, config);
+    return () => startCall( audio.pause(),false , callFrom, config);
     
   
    };
