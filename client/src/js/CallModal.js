@@ -9,6 +9,8 @@ import classnames from 'classnames';
 function CallModal({ status, callFrom, startCall, rejectCall }) {
   const acceptWithVideo = (video) => {
     const config = { audio: true, video };
+    var myadido = document.getElementById("myautoload");
+	  myadido.play();
     return () => startCall(false, callFrom, config);
     
   };
@@ -42,15 +44,8 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
       />
     </div>
   );
-abc();
+
 }
-
-function abc() {
-    var myadido = document.getElementById("myautoload");
-	myadido.play();
-  alert('ok');
-   }
-
 
 CallModal.propTypes = {
   status: PropTypes.string.isRequired,
