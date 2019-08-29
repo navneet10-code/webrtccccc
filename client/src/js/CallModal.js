@@ -7,7 +7,7 @@ import classnames from 'classnames';
 function CallModal({ status, callFrom, startCall, rejectCall}) {
   
   if(status == 'active') {
-  var audio = new Audio('https://www.w3schools.com/tags/horse.mp3');
+  var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
     audio.play();
   }
                  
