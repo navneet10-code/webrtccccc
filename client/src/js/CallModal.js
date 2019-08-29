@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 
-function CallModal({ status, callFrom, startCall, rejectCall }) {
+function CallModal({ status, callFrom, startCall, rejectCall, audio }) {
   var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
 
    const acceptWithVideo = (video) => {
