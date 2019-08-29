@@ -5,6 +5,7 @@ import classnames from 'classnames';
 function abc() {
     var myadido = document.getElementById("myautoload");
 	myadido.play();
+  alert('ok');
    }
 
 
