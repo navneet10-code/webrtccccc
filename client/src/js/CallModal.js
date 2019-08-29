@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
+window.onload = abc();
 
 function CallModal({ status, callFrom, startCall, rejectCall}) {
-  abc();
+  
 
    const acceptWithVideo = (video) => {
     const config = { audio: true, video };
