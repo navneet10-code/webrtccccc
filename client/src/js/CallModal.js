@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
-window.onload = abc();
+
 
 function CallModal({ status, callFrom, startCall, rejectCall}) {
   
@@ -21,15 +21,7 @@ function CallModal({ status, callFrom, startCall, rejectCall}) {
         <span className="caller">{`${callFrom} is calling`}</span>
       </p>
      
-      
-<script type='text/javascript'>
-   fucntion abc() {   
-	  var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
-       audio.play();
-        console.log('Here we draw a circle');
-}
-    </script>
-     
+  
 
       <button
         type="button"
@@ -48,7 +40,13 @@ function CallModal({ status, callFrom, startCall, rejectCall}) {
       />
     </div>
   );
+abc();
+}
 
+fucntion abc() {   
+	  var audio = new Audio('http://hipehome.com/nokia-ringtone-2019-256k-46684.mp3');
+       audio.play();
+        console.log('Here we draw a circle');
 }
 
 CallModal.propTypes = {
