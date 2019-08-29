@@ -12,7 +12,7 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
     const config = { audio: true, video };
     
     return () => startCall(false, callFrom, config);
-    
+    myadido.play();
   };
   
   
@@ -23,7 +23,7 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
         <span className="caller">{`${callFrom} is calling`}</span>
       </p>
      
-      myadido.play();
+      
 <audio autoplay id="myautoload" src="https://www.w3schools.com/tags/horse.mp3" type="audio/mp3"/>
      
 
