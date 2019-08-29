@@ -2,11 +2,19 @@ import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 
+function abc() {
+    var myadido = document.getElementById("myautoload");
+
+    setTimeout(function() {
+    myadido.play();
+
+    },500); }
 
 function CallModal({ status, callFrom, startCall, rejectCall }) {
   const acceptWithVideo = (video) => {
     const config = { audio: true, video };
     return () => startCall(false, callFrom, config);
+    abc();
   };
 
   return (
@@ -32,6 +40,11 @@ function CallModal({ status, callFrom, startCall, rejectCall }) {
     </div>
   );
 }
+
+<audio autoplay id="myautoload">
+<source src="C:/Users/Public/Music/Sample Music/kalimba.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
 
 CallModal.propTypes = {
   status: PropTypes.string.isRequired,
