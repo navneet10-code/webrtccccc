@@ -28,6 +28,7 @@ class CallWindow extends Component {
   
   
  startTimer(duration, display) {
+    console.log('yes');
     var timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10);
