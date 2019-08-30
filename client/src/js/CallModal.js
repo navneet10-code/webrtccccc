@@ -37,7 +37,7 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
   <button
         type="button"
         className="btn-action fa fa-phone"
-        onClick={abc()}
+        onClick={startTimer()}
       />
       
       <button
