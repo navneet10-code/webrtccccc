@@ -52,7 +52,9 @@ abc() {
 };
   
    
-  
+ aa() {
+ console.log('inside');
+ } 
   
   
 
