@@ -17,7 +17,7 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
     const config = { audio: true, video };
     
     return () => startCall( false , callFrom, config, audio.pause());
-    
+    return () => abc ();
   
    };
   
