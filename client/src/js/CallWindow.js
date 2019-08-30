@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 import _ from 'lodash';
+import CallModal from './CallModal';
+
 
 class CallWindow extends Component {
   constructor(props) {
@@ -20,7 +22,40 @@ class CallWindow extends Component {
   componentDidMount() {
     this.setMediaStream();
   }
+  
+  
+  
+  
+  
+ startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+abc() {
+    var fiveMinutes = 60 * 5,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
+  
+   
+  
+  
+  
+
+  
   componentWillReceiveProps(nextProps) {
     const { config: currentConfig } = this.props;
     // Initialize when the call started
@@ -84,6 +119,10 @@ class CallWindow extends Component {
             className="btn-action hangup fa fa-phone"
             onClick={() => endCall(true)}
           />
+           
+           <div><span id="time"></span> </div>
+
+   
         </div>
       </div>
     );
