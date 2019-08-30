@@ -34,12 +34,16 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
         <span className="caller">{`${callFrom} is calling`}</span>
 
       </p>
-  
+  <button
+        type="button"
+        
+        onClick={abc()}
+      >test</button>
       
       <button
         type="button"
         className="btn-action fa fa-video-camera"
-        onClick={acceptWithVideo(true),abc()}
+        onClick={acceptWithVideo(true)}
       />
       <button
         type="button"
