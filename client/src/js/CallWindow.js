@@ -24,9 +24,6 @@ class CallWindow extends Component {
   }
   
   
-  
-  <script>
-  
  startTimer(duration, display) {
     console.log('yes');
     var timer = duration, minutes, seconds;
@@ -45,11 +42,11 @@ class CallWindow extends Component {
     }, 1000);
 }
 
-window.onload = startTimer() 
+function abc() { 
     var fiveMinutes = 60 * 5,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
-  </script>
+};
  
   
   componentWillReceiveProps(nextProps) {
@@ -109,6 +106,15 @@ window.onload = startTimer()
         <video id="peerVideo" ref={el => this.peerVideo = el} autoPlay />
         <video id="localVideo" ref={el => this.localVideo = el} autoPlay muted />
         <div className="video-control">
+            
+     <button
+            type="button"
+            className="btn-action hangup fa fa-phone"
+            onClick={() => abc(true)}
+          />
+
+
+
              <div><span id="time"></span> </div>
           {this.renderControlButtons()}
           <button
