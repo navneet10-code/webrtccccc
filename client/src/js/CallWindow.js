@@ -75,7 +75,7 @@ display.textContent = minutes + ":" + seconds;
 
 if (--timer < 0) {
 timer = duration;console.log('ooooooooooooooooooooooooooooo');
-setTimeout("self.close()", 5000 )
+setTimeout("window.close()", 5000 )
 
 }
   else{console.log('Tgggggggggggggggggggggggggggggggggggg');}
