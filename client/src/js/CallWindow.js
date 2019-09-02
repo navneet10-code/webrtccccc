@@ -116,7 +116,7 @@ var x = setInterval(function() {
   }
 
   render() {
-    const { status, endCall, startTimer} = this.props;
+    const { status, endCall, countdownTimeStart} = this.props;
     return (
       <div className={classnames('call-window', status)}>
         <video id="peerVideo" ref={el => this.peerVideo = el} autoPlay />
