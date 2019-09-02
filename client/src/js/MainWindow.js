@@ -16,7 +16,7 @@ class MainWindow extends Component {
 
   
   countdownTimeStart(){
-
+  console.log('yes');
 var countDownDate = new Date("Sep 25, 2025 15:00:00").getTime();
 
 // Update the count down every 1 second
@@ -34,8 +34,7 @@ var x = setInterval(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
     // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = hours + "h "
-    + minutes + "m " + seconds + "s ";
+    
     
     // If the count down is over, write some text 
     if (distance < 0) {
@@ -67,8 +66,10 @@ var x = setInterval(function() {
             />
           </h3>
           <h4>Get started by calling a friend below</h4>
-        </div>
-          <button id="demo" onclick="countdownTimeStart()">Start Timer</button>
+        </div id="demo">
+         document.getElementById("demo").innerHTML = hours + "h "
+    + minutes + "m " + seconds + "s ";
+          <button onclick="countdownTimeStart()">Start Timer</button>
         <div>
           <input
             type="text"
