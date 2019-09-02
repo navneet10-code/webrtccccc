@@ -46,8 +46,8 @@ var x = setInterval(function() {
 }
     
  return ( 
-  <p id="demo"></p>
-<button onclick="countdownTimeStart()">Start Timer</button>
+  
+<button id="demo" onclick="countdownTimeStart()">Start Timer</button>
   );
   
   
