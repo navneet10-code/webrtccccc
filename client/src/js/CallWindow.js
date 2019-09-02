@@ -23,30 +23,7 @@ class CallWindow extends Component {
     this.setMediaStream();
   }
   
-  
- startTimer(duration, display) {
-    console.log('yes');
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
-
-abc() { 
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-};
+ 
  
   
   componentWillReceiveProps(nextProps) {
@@ -106,16 +83,30 @@ abc() {
         <video id="peerVideo" ref={el => this.peerVideo = el} autoPlay />
         <video id="localVideo" ref={el => this.localVideo = el} autoPlay muted />
         <div className="video-control">
-            
-     <button
-            type="button"
-            className="btn-action hangup fa fa-phone"
-            onClick={() => abc(true)}
-          />
+           
+
+
+       <div class="clock-builder-output"></div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/clock_assets/jquery.countdown.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var d = new Date();
+	d.setTime(1567491540*1000); // from: 09/03/2019 11:49 am +0530
+	$('.clock-builder-output').countdown(d, function(event) {
+		$(this).html(event.strftime('%H:%M:%S'));
+	});
+});
+</script>
 
 
 
-             <div><span id="time"></span> </div>
+
+
+
+
+
+    
           {this.renderControlButtons()}
           <button
             type="button"
