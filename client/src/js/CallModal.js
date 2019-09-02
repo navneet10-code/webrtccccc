@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
-
+import CallWindow from './CallWindow';
 
 
 function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
@@ -16,7 +16,7 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
    const acceptWithVideo = (video) => {
     const config = { audio: true, video };
     
-    return () => startCall( false , callFrom, config, audio.pause());
+    return () => startCall( false , callFrom, config, audio.pause(), aa());
    
   
    };
