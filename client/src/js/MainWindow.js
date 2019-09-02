@@ -45,10 +45,10 @@ var x = setInterval(function() {
 }, 1000);
 }
     
- return ( 
+ 
   
-<button id="demo" onclick="countdownTimeStart()">Start Timer</button>
-  );
+
+  
   
   
   render() {
@@ -68,6 +68,7 @@ var x = setInterval(function() {
           </h3>
           <h4>Get started by calling a friend below</h4>
         </div>
+          <button id="demo" onclick="countdownTimeStart()">Start Timer</button>
         <div>
           <input
             type="text"
