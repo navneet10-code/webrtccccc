@@ -126,7 +126,7 @@ var x = setInterval(function() {
         <button id="demo"
             type="button"
             className="btn-action hangup fa fa-phone"
-            onClick={() => countdownTimeStart(true)}
+            onClick={countdownTimeStart()}
           />
         
 
