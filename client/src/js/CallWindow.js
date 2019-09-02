@@ -110,7 +110,7 @@ abc() {
      <button
             type="button"
             className="btn-action hangup fa fa-phone"
-            onClick={() => abc()}
+            onClick={() => startTimer(duration,true)}
           />
 
 
