@@ -45,19 +45,12 @@ class CallWindow extends Component {
     }, 1000);
 }
 
-abc() {
+window.onload = startTimer() 
     var fiveMinutes = 60 * 5,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
-};
   
-   
- aa() {
- console.log('inside');
- } 
-  
-  
-
+ 
   
   componentWillReceiveProps(nextProps) {
     const { config: currentConfig } = this.props;
