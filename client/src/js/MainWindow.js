@@ -66,11 +66,15 @@ var x = setInterval(function() {
             />
           </h3>
           <h4>Get started by calling a friend below</h4>
-        </div id="demo">
+        
+      <p id="demo">
          document.getElementById("demo").innerHTML = hours + "h "
     + minutes + "m " + seconds + "s ";
           <button onclick="countdownTimeStart()">Start Timer</button>
-        <div>
+      
+    </p>
+    
+    
           <input
             type="text"
             className="txt-clientId"
