@@ -86,19 +86,19 @@ class CallWindow extends Component {
            
 
 
-       <div class="clock-builder-output">
+       <div class="clock-builder-output"></div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/clock_assets/jquery.countdown.min.js"></script>
 <script type="text/javascript">
 $(function(){
-	var d = new Date();
+  d = new Date();
 	d.setTime(1567491540*1000); // from: 09/03/2019 11:49 am +0530
 	$('.clock-builder-output').countdown(d, function(event) {
 		$(this).html(event.strftime('%H:%M:%S'));
 	});
 });
 </script>
-</div>
+
 
 
 
