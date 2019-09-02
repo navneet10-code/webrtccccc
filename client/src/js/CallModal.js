@@ -28,7 +28,7 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
   
   const timer = (video) => {
   
-    return () => aa();
+    return () => startTimer();
   
   };
    
