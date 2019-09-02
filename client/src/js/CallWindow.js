@@ -122,14 +122,7 @@ var x = setInterval(function() {
         <video id="peerVideo" ref={el => this.peerVideo = el} autoPlay />
         <video id="localVideo" ref={el => this.localVideo = el} autoPlay muted />
         <div className="video-control">
-           
-        <button id="demo"
-            type="button"
-            className="btn-action hangup fa fa-phone"
-            onClick={countdownTimeStart()}
-          />
         
-
     
           {this.renderControlButtons()}
           <button
