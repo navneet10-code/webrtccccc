@@ -42,7 +42,7 @@ class CallWindow extends Component {
     }, 1000);
 }
 
-function abc() { 
+abc() { 
     var fiveMinutes = 60 * 5,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
