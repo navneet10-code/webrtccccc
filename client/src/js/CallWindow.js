@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 import _ from 'lodash';
-import endcall from './app.js'; 
+
 
 var endTime = new Date().setTime(1362009600000);
 var currentTime = new Date().getTime();
@@ -75,7 +75,7 @@ display.textContent = minutes + ":" + seconds;
 
 if (--timer < 0) {
 timer = duration;console.log('ooooooooooooooooooooooooooooo');
-endcall: [Function: endcall(true)];
+
 
 }else{console.log('Tgggggggggggggggggggggggggggggggggggg');}
 }, 1000);
