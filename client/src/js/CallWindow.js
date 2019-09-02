@@ -25,7 +25,7 @@ class CallWindow extends Component {
   
   
   
-  
+  <script>
   
  startTimer(duration, display) {
     console.log('yes');
@@ -49,7 +49,7 @@ window.onload = startTimer()
     var fiveMinutes = 60 * 5,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
-  
+  </script>
  
   
   componentWillReceiveProps(nextProps) {
