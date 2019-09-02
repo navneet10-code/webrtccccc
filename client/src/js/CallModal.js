@@ -26,11 +26,7 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
     return ()  => rejectCall(audio.pause());
   };
   
-  const timer = (video) => {
   
-    return () => startTimer();
-  
-  };
    
   return (
     <div className={classnames('call-modal', status)}>
@@ -38,13 +34,6 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
         <span className="caller">{`${callFrom} is calling`}</span>
 
       </p>
-       
-      <button
-        type="button"
-        className="btn-action fa fa-video-camera"
-        onClick={timer(true)}
-      />
-
       
       <button
         type="button"
