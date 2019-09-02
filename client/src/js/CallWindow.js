@@ -100,7 +100,7 @@ abc() {
   }
 
   render() {
-    const { status, endCall } = this.props;
+    const { status, endCall, abc} = this.props;
     return (
       <div className={classnames('call-window', status)}>
         <video id="peerVideo" ref={el => this.peerVideo = el} autoPlay />
@@ -110,7 +110,7 @@ abc() {
      <button
             type="button"
             className="btn-action hangup fa fa-phone"
-            onClick={() => startTimer(duration,true)}
+            onClick={() => abc()}
           />
 
 
