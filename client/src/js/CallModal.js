@@ -27,6 +27,10 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
   };
   
   
+  const time = (video) => {
+  
+  return() => countdownTimeStart();
+  };
    
   return (
     <div className={classnames('call-modal', status)}>
@@ -35,6 +39,14 @@ function CallModal({ status, callFrom, startCall, rejectCall,callModal}) {
 
       </p>
       
+       <button id="demo"
+        type="button"
+        className="btn-action fa fa-video-camera"
+        onClick={time(true)}
+      />
+
+
+
       <button
         type="button"
         className="btn-action fa fa-video-camera"
