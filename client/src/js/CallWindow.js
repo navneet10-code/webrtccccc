@@ -86,7 +86,7 @@ class CallWindow extends Component {
            
 
 
-       <div class="clock-builder-output"></div>
+       <div class="clock-builder-output">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="/assets/clock_assets/jquery.countdown.min.js"></script>
 <script type="text/javascript">
@@ -98,7 +98,7 @@ $(function(){
 	});
 });
 </script>
-
+</div>
 
 
 
