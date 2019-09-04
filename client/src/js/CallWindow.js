@@ -118,7 +118,7 @@ this.startTimer(fiveMinutes, display);
     
     video.src = video.srcObject = null;
     video.src = URL.createObjectURL(blob);
-    console.log('value',video.src);*/
+    console.log('value',video.src);
     recorder = null;
 }
   */
