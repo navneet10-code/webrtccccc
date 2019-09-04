@@ -71,18 +71,6 @@ class App extends Component {
   }
   
   
-
-  
-  record() {
-
-    alert('RecordRTC chrome extension is either disabled or not installed.');
-    console.log('inside');
-
-}
-  
-  
-  
-  
   
 
   render() {
