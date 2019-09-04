@@ -131,8 +131,8 @@ this.startTimer(fiveMinutes, display);
   this.disabled = true;
 
     // third and last step
-    /*recorder.stopRecording(this.stopRecordingCallback());*/
-    recorder = null;
+    recorder.stopRecording(null);
+    
 }
     
  
