@@ -93,15 +93,21 @@ this.startTimer(fiveMinutes, display);
   
  
  recordd() {
+   
+   if(typeof RecordRTC_Extension === 'undefined') {
+    alert('RecordRTC chrome extension is either disabled or not installed.');
+}
     console.log('yayayyayayayayaya');
     var recorder = new RecordRTC_Extension();
 
-    var video = document.querySelector('video');
+    //var video = document.querySelector('video');
     this.disabled = true;
     // you can find list-of-options here:
     // https://github.com/muaz-khan/Chrome-Extensions/tree/master/screen-recording#getsupoortedformats
     var options = recorder.getSupoortedFormats()[1];
-
+    recorder.startRecording(options, function() {
+        document.getElementById('btn-stop-recording').disabled = false;
+    });
     
 }
   
