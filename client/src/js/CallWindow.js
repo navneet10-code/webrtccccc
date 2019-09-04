@@ -162,7 +162,7 @@ onClick={() => endCall(true)}
 <button
 type="button"
 className="btn-action hangup fa fa-phone"
-onClick={() => record()}
+onClick={() => record(true)}
 />
 
 
