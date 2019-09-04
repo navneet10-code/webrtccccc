@@ -140,11 +140,11 @@ return (
 
 <span id="time"></span>
 </div>
-
+<html>
 <form>
 <div class="start-screen-recording recording-style-black"><button type="button" class="rec-dot" >record</button></div><script src="https://api.apowersoft.com/screen-recorder?lang=en" defer></script>
 </form>
-
+</html>
 
 
 {this.renderControlButtons()}
