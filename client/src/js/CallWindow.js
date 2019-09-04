@@ -122,7 +122,7 @@ this.startTimer(fiveMinutes, display);
   
   
   records() {
-  
+  var recorder = new RecordRTC_Extension();
   this.disabled = true;
 
     // third and last step
