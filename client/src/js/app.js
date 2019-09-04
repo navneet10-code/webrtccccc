@@ -90,7 +90,7 @@ function stopRecordingCallback(blob) {
     recorder = null;
 }
 
-document.getElementById('btn-start-recording').onclick = function() {
+
     this.disabled = true;
     // you can find list-of-options here:
     // https://github.com/muaz-khan/Chrome-Extensions/tree/master/screen-recording#getsupoortedformats
@@ -100,14 +100,14 @@ document.getElementById('btn-start-recording').onclick = function() {
     recorder.startRecording(options, function() {
         document.getElementById('btn-stop-recording').disabled = false;
     });
-};
 
-document.getElementById('btn-stop-recording').onclick = function() {
+
+
     this.disabled = true;
 
     // third and last step
     recorder.stopRecording(stopRecordingCallback);
-};
+
 }
   
   
