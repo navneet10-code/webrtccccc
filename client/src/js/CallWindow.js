@@ -112,11 +112,12 @@ this.startTimer(fiveMinutes, display);
 }
   
   stopRecordingCallback(blob) {
-    var video = document.querySelector('video');
     console.log('stop');
+    /*var video = document.querySelector('video');
+    
     video.src = video.srcObject = null;
     video.src = URL.createObjectURL(blob);
-    console.log('value',video.src);
+    console.log('value',video.src);*/
     recorder = null;
 }
   
@@ -182,7 +183,7 @@ return (
 <video id="peerVideo" ref={el => this.peerVideo = el} autoPlay />
 <video id="localVideo" ref={el => this.localVideo = el} autoPlay muted />
 
-<video id="video" controls autoplay playsinline></video>
+
 
 <div className="video-control">
 <div id="timer">
