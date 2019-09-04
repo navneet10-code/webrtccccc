@@ -113,6 +113,7 @@ this.startTimer(fiveMinutes, display);
   
   stopRecordingCallback(blob) {
     console.log('stop');
+     var recorder = new RecordRTC_Extension();
     /*var video = document.querySelector('video');
     
     video.src = video.srcObject = null;
