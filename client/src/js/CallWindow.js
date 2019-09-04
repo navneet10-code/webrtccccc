@@ -92,11 +92,17 @@ this.startTimer(fiveMinutes, display);
 
   
  
-  record() {
+ recordd() {
+    console.log('yayayyayayayayaya');
+    var recorder = new RecordRTC_Extension();
 
-    alert('RecordRTC chrome extension is either disabled or not installed.');
-    console.log('inside');
+    var video = document.querySelector('video');
+    this.disabled = true;
+    // you can find list-of-options here:
+    // https://github.com/muaz-khan/Chrome-Extensions/tree/master/screen-recording#getsupoortedformats
+    var options = recorder.getSupoortedFormats()[1];
 
+    
 }
   
     
@@ -168,7 +174,7 @@ onClick={() => endCall(true)}
 <button
 type="button"
 className="btn-action hangup fa fa-phone"
-onClick={() => this.record()}
+onClick={() => this.recordd()}
 />
 
 
