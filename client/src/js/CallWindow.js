@@ -111,6 +111,23 @@ this.startTimer(fiveMinutes, display);
     
 }
   
+  stopRecordingCallback(blob) {
+    video.src = video.srcObject = null;
+    video.src = URL.createObjectURL(blob);
+    console.log('value',video.src);
+    recorder = null;
+}
+  
+  
+  
+  
+  records() {
+  
+  this.disabled = true;
+
+    // third and last step
+    recorder.stopRecording(stopRecordingCallback);
+}
     
  
   
@@ -181,6 +198,12 @@ onClick={() => endCall(true)}
 type="button"
 className="btn-action hangup fa fa-phone"
 onClick={() => this.recordd()}
+/>
+
+<button
+type="button"
+className="btn-action hangup fa fa-phone"
+onClick={() => this.records()}
 />
 
 
