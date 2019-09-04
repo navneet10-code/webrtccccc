@@ -141,6 +141,11 @@ return (
 <span id="time"></span>
 </div>
 
+<div class="start-screen-recording recording-style-black"><button type="button" className="rec-dot" >record</button></div><script src="https://api.apowersoft.com/screen-recorder?lang=en" defer></script>
+
+
+
+
 {this.renderControlButtons()}
 <button
 type="button"
