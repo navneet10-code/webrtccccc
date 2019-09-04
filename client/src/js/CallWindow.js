@@ -91,10 +91,16 @@ this.startTimer(fiveMinutes, display);
 
 
   
+ 
+  record() {
+
+    alert('RecordRTC chrome extension is either disabled or not installed.');
+    console.log('inside');
+
+}
   
-  
-  
-  
+    
+ 
   
   
   
@@ -138,7 +144,7 @@ onClick={() => this.toggleMediaDevice(btn.type)}
 }
 
 render() {
-const { status, endCall , record} = this.props;
+const { status, endCall } = this.props;
 return (
 <div className={classnames('call-window', status)}>
 <video id="peerVideo" ref={el => this.peerVideo = el} autoPlay />
@@ -162,7 +168,7 @@ onClick={() => endCall(true)}
 <button
 type="button"
 className="btn-action hangup fa fa-phone"
-onClick={() => record(true)}
+onClick={() => this.record()}
 />
 
 
