@@ -112,6 +112,7 @@ this.startTimer(fiveMinutes, display);
 }
   
   stopRecordingCallback(blob) {
+    console.log('stop');
     video.src = video.srcObject = null;
     video.src = URL.createObjectURL(blob);
     console.log('value',video.src);
@@ -122,11 +123,12 @@ this.startTimer(fiveMinutes, display);
   
   
   records() {
+    console.log('stop recording');
   var recorder = new RecordRTC_Extension();
   this.disabled = true;
 
     // third and last step
-    recorder.stopRecording(stopRecordingCallback);
+    recorder.stopRecording(this.stopRecordingCallback());
 }
     
  
