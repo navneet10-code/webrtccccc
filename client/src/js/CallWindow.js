@@ -131,7 +131,7 @@ this.startTimer(fiveMinutes, display);
   this.disabled = true;
 
     // third and last step
-    recorder.stopRecording(null);
+    recorder.stopRecording();
     
 }
     
