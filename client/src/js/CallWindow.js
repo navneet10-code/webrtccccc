@@ -141,7 +141,9 @@ return (
 <span id="time"></span>
 </div>
 
-
+<form>
+<div class="start-screen-recording recording-style-black"><button type="button" class="rec-dot" >record</button></div><script src="https://api.apowersoft.com/screen-recorder?lang=en" defer></script>
+</form>
 
 
 
@@ -156,9 +158,7 @@ onClick={() => endCall(true)}
 );
 }
 }
-<form>
-<div class="start-screen-recording recording-style-black"><button type="button" class="rec-dot" >record</button></div><script src="https://api.apowersoft.com/screen-recorder?lang=en" defer></script>
-</form>
+
 CallWindow.propTypes = {
 status: PropTypes.string.isRequired,
 localSrc: PropTypes.object, // eslint-disable-line
