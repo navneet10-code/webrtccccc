@@ -147,16 +147,7 @@ return (
 <html>
 <body>
 
-<style>
-    html, body {
-        margin: 0!important;
-        padding: 0!important;
-    }
 
-    video {
-        max-width: 100%;
-    }
-</style>
 
 <title>RecordRTC Google Chrome Extension API</title>
 <h1>How to use RecordRTC_Extension? <a href="https://github.com/muaz-khan/Chrome-Extensions/tree/master/screen-recording#call-from-your-own-website">Check API/Documentation</a></h1>
