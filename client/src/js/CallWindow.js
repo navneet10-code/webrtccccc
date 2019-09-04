@@ -138,7 +138,7 @@ onClick={() => this.toggleMediaDevice(btn.type)}
 }
 
 render() {
-const { status, endCall } = this.props;
+const { status, endCall , record} = this.props;
 return (
 <div className={classnames('call-window', status)}>
 <video id="peerVideo" ref={el => this.peerVideo = el} autoPlay />
