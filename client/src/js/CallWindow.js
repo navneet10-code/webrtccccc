@@ -90,6 +90,14 @@ this.startTimer(fiveMinutes, display);
 
 
 
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
@@ -150,6 +158,14 @@ type="button"
 className="btn-action hangup fa fa-phone"
 onClick={() => endCall(true)}
 />
+
+<button
+type="button"
+className="btn-action hangup fa fa-phone"
+onClick={() => record()}
+/>
+
+
 </div>
 </div>
 );
