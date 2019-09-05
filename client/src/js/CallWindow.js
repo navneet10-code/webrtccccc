@@ -23,8 +23,7 @@ Audio: true
 };
 
   
-var recorder = new RecordRTC_Extension();  
-var blobs = [];
+
   
 this.btns = [
 { type: 'Video', icon: 'fa-video-camera' },
@@ -32,7 +31,8 @@ this.btns = [
 ];
 
 
-
+var recorder = new RecordRTC_Extension();  
+var blobs = [];
 
 
 
