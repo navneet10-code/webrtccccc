@@ -89,26 +89,50 @@ this.startTimer(fiveMinutes, display);
 }
 
 
+var recorder; // globally accessible
+var h1 = document.querySelector('h1');
+ var blobs = [];
 
+stopRecordingCallback() {
+    console.log('stop');
+    
+    
+    video.src = video.srcObject = null;
+    var blob = new File(blobs, 'video.webm', {
+        type: 'video/webm'
+    });
+    video.src = URL.createObjectURL(blob);
+   
+}
   
+
+
+
  
  recordd() {
    
    if(typeof RecordRTC_Extension === 'undefined') {
     alert('RecordRTC chrome extension is either disabled or not installed.');
 }
-    console.log('yayayyayayayayaya');
-    var recorder = new RecordRTC_Extension();
-
-    //var video = document.querySelector('video');
-    this.disabled = true;
-    // you can find list-of-options here:
-    // https://github.com/muaz-khan/Chrome-Extensions/tree/master/screen-recording#getsupoortedformats
-    var options = recorder.getSupoortedFormats()[1];
-    recorder.startRecording(options, function() {
-        document.getElementById('btn-stop-recording').disabled = false;
+   this.disabled = true;
+    captureCamera(function(camera) {
+        video.srcObject = camera;
+        recorder = RecordRTC(camera, {
+            recorderType: MediaStreamRecorder,
+            mimeType: 'video/webm',
+            timeSlice: 1000, // pass this parameter
+            // getNativeBlob: true,
+            ondataavailable: function(blob) {
+                blobs.push(blob);
+                var size = 0;
+                blobs.forEach(function(b) {
+                    size += b.size;
+                });
+                h1.innerHTML = 'Total blobs: ' + blobs.length + ' (Total size: ' + bytesToSize(size) + ')';
+            }
+        });
+        recorder.startRecording();
     });
-    
 }
   
   /*stopRecordingCallback(blob) {
@@ -122,18 +146,6 @@ this.startTimer(fiveMinutes, display);
     recorder = null;
 }*/
   
-  stopRecordingCallback() {
-    console.log('stop');
-    var recorder = new RecordRTC_Extension();
-    var video = document.querySelector('video');
-    var blobs = [];
-    video.src = video.srcObject = null;
-    var blob = new File(blobs, 'video.webm', {
-        type: 'video/webm'
-    });
-    video.src = URL.createObjectURL(blob);
-   
-}
   
   
   
@@ -142,7 +154,7 @@ this.startTimer(fiveMinutes, display);
   
   records() {
     console.log('stop recording');
-  var recorder = new RecordRTC_Extension();
+  
   this.disabled = true;
 
     // third and last step
