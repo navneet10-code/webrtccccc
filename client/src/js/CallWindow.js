@@ -230,7 +230,8 @@ className="btn-action hangup fa fa-phone"
 onClick={() => this.share()}
 />
 
-
+<script src="//cdn.webrtc-experiment.com/getScreenId.js"></script>
+<script src="//cdn.webrtc-experiment.com/screen.js"></script>
 
 
 </div>
@@ -249,5 +250,4 @@ endCall: PropTypes.func.isRequired
 };
 
 export default CallWindow;
-<script src="//cdn.webrtc-experiment.com/getScreenId.js"></script>
-<script src="//cdn.webrtc-experiment.com/screen.js"></script>
+
