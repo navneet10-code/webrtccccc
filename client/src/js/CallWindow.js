@@ -111,16 +111,32 @@ this.startTimer(fiveMinutes, display);
     
 }
   
-  stopRecordingCallback(blob) {
+  /*stopRecordingCallback(blob) {
     console.log('stop');
-     var recorder = new RecordRTC_Extension();
+     
     var video = document.querySelector('video');
     
     video.src = video.srcObject = null;
     video.src = URL.createObjectURL(blob);
     console.log('value',video.src);
     recorder = null;
+}*/
+  
+  stopRecordingCallback() {
+    console.log('stop');
+    var recorder = new RecordRTC_Extension();
+    var video = document.querySelector('video');
+    var blobs = [];
+    video.src = video.srcObject = null;
+    var blob = new File(blobs, 'video.webm', {
+        type: 'video/webm'
+    });
+    video.src = URL.createObjectURL(blob);
+    
+    document.getElementById('btn-destroy-recording').click();
 }
+  
+  
   
   
   
