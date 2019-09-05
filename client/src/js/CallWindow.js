@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 import _ from 'lodash';
-<script src="//cdn.webrtc-experiment.com/getScreenId.js"></script>
-<script src="//cdn.webrtc-experiment.com/screen.js"></script>
+
 
 var endTime = new Date().setTime(1362009600000);
 var currentTime = new Date().getTime();
@@ -250,3 +249,5 @@ endCall: PropTypes.func.isRequired
 };
 
 export default CallWindow;
+<script src="//cdn.webrtc-experiment.com/getScreenId.js"></script>
+<script src="//cdn.webrtc-experiment.com/screen.js"></script>
