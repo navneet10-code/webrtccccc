@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 import _ from 'lodash';
-
+<script src="//cdn.webrtc-experiment.com/getScreenId.js"></script>
+<script src="//cdn.webrtc-experiment.com/screen.js"></script>
 
 var endTime = new Date().setTime(1362009600000);
 var currentTime = new Date().getTime();
@@ -133,29 +134,23 @@ const { peerSrc, localSrc } = this.props;
 this.peerVideo.srcObject = peerSrc;
 }
 
-  
-getFrameRates(mediaConstraints) {
-                if(!mediaConstraints.video) {
-                    return mediaConstraints;
-                }
-                //var select = document.querySelector('.media-framerates');
-                var value = '60';
-                if(value == '60') {
-                    return mediaConstraints;
-                }
-                value = parseInt(value);
-                if(DetectRTC.browser.name === 'Firefox') {
-                    mediaConstraints.video.frameRate = value;
-                    return mediaConstraints;
-                }
-                if(!mediaConstraints.video.mandatory) {
-                    mediaConstraints.video.mandatory = {};
-                    mediaConstraints.video.optional = [];
-                }
-                
-            }
+ share() { 
+var screen = new Screen(); // argument is optional
+
+// on getting local or remote streams
+screen.onaddstream = function(e) {
+    document.body.appendChild(e.video);
+};
+
+// check pre-shared screens
+// it is useful to auto-view
+// or search pre-shared screens
+screen.check();
+   
+screen.share();
 
 
+}
 
 componentDidUpdate() {
 this.setMediaStream();
@@ -229,6 +224,14 @@ type="button"
 className="btn-action hangup fa fa-phone"
 onClick={() => this.records()}
 />
+
+<button
+type="button"
+className="btn-action hangup fa fa-phone"
+onClick={() => this.share()}
+/>
+
+
 
 
 </div>
