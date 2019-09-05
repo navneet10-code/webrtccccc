@@ -12,7 +12,7 @@ var mins = Math.floor((remainingTime/1000)/60);
 // calculate the seconds (don't change this! unless time progresses at a different speed for you...)
 //var secs = mins * 60;
 var secs = Math.floor(remainingTime/1000);
-var recorder = new RecordRTC_Extension();  
+var recorder ;   
 var blobs = [];
 
 
@@ -98,7 +98,7 @@ if(typeof RecordRTC_Extension === 'undefined') {
 alert('RecordRTC chrome extension is either disabled or not installed.');
 }
 
-
+recorder= new RecordRTC_Extension();
 //var video = document.querySelector('video');
 this.disabled = true;
 // you can find list-of-options here:
