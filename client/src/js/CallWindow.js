@@ -89,82 +89,45 @@ this.startTimer(fiveMinutes, display);
 }
 
 
-var recorder; // globally accessible
-var h1 = document.querySelector('h1');
- var blobs = [];
-
-stopRecordingCallback() {
-    console.log('stop');
-    
-    
-    video.src = video.srcObject = null;
-    var blob = new File(blobs, 'video.webm', {
-        type: 'video/webm'
-    });
-    video.src = URL.createObjectURL(blob);
-   
+recordd() { 
+if(typeof RecordRTC_Extension === 'undefined') {
+alert('RecordRTC chrome extension is either disabled or not installed.');
 }
+
+
+//var video = document.querySelector('video');
+this.disabled = true;
+// you can find list-of-options here:
+// https://github.com/muaz-khan/Chrome-Extensions/tree/master/screen-recording#getsupoortedformats
+var options = recorder.getSupoortedFormats()[1];
+recorder.startRecording(options, function() {
+document.getElementById('btn-stop-recording').disabled = false;
+});
+} 
   
+  
+stopRecordingCallback(blob) {
 
+var video = document.querySelector('video');
 
+video.src = video.srcObject = null;
+var blob = new File(blobs, 'video.mp4', {
+type: 'video/mp4'
+});
+//video.src = URL.createObjectURL(blob);
 
- 
- recordd() {
-   
-   if(typeof RecordRTC_Extension === 'undefined') {
-    alert('RecordRTC chrome extension is either disabled or not installed.');
+recorder = null;
+} 
+  
+records(){
+
+//this.disabled = true;
+
+// third and last step
+recorder.stopRecording(this.stopRecordingCallback());
+const { peerSrc, localSrc } = this.props;
+this.peerVideo.srcObject = peerSrc;
 }
-   this.disabled = true;
-    captureCamera(function(camera) {
-        video.srcObject = camera;
-        recorder = RecordRTC(camera, {
-            recorderType: MediaStreamRecorder,
-            mimeType: 'video/webm',
-            timeSlice: 1000, // pass this parameter
-            // getNativeBlob: true,
-            ondataavailable: function(blob) {
-                blobs.push(blob);
-                var size = 0;
-                blobs.forEach(function(b) {
-                    size += b.size;
-                });
-                h1.innerHTML = 'Total blobs: ' + blobs.length + ' (Total size: ' + bytesToSize(size) + ')';
-            }
-        });
-        recorder.startRecording();
-    });
-}
-  
-  /*stopRecordingCallback(blob) {
-    console.log('stop');
-     
-    var video = document.querySelector('video');
-    
-    video.src = video.srcObject = null;
-    video.src = URL.createObjectURL(blob);
-    console.log('value',video.src);
-    recorder = null;
-}*/
-  
-  
-  
-  
-  
-  
-  
-  records() {
-    console.log('stop recording');
-  
-  this.disabled = true;
-
-    // third and last step
-    recorder.stopRecording(this.stopRecordingCallback());
-    
-}
-    
- 
-  
-  
   
 
 
