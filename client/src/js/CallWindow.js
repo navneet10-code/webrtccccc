@@ -12,6 +12,8 @@ var mins = Math.floor((remainingTime/1000)/60);
 // calculate the seconds (don't change this! unless time progresses at a different speed for you...)
 //var secs = mins * 60;
 var secs = Math.floor(remainingTime/1000);
+var recorder = new RecordRTC_Extension();  
+var blobs = [];
 
 
 class CallWindow extends Component {
@@ -31,8 +33,6 @@ this.btns = [
 ];
 
 
-var recorder = new RecordRTC_Extension();  
-var blobs = [];
 
 
 
@@ -78,8 +78,8 @@ seconds = seconds < 10 ? "0" + seconds : seconds;
 display.textContent = minutes + ":" + seconds;
 
 if (--timer < 0) {
-timer = duration;console.log('ooooooooooooooooooooooooooooo');
-setTimeout(endCall(true), 5000 )
+
+window.location.replace("https://saasnicwebrtc.herokuapp.com/");
 
 }
   else{console.log('Tgggggggggggggggggggggggggggggggggggg');}
