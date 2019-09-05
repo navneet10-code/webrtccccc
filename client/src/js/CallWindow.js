@@ -22,6 +22,10 @@ Video: true,
 Audio: true
 };
 
+  
+var recorder = new RecordRTC_Extension();  
+var blobs = [];
+  
 this.btns = [
 { type: 'Video', icon: 'fa-video-camera' },
 { type: 'Audio', icon: 'fa-microphone' }
