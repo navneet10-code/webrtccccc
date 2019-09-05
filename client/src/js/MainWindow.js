@@ -14,6 +14,13 @@ class MainWindow extends Component {
     return () => startCall(true, friendID, config);
   }
 
+
+  callWithVideoTest(audio) {
+    const { startCall } = this.props;
+    const config = { audio: true };
+    return () => startCall(true, friendID, config);
+  }
+  
   
   
   render() {
@@ -51,7 +58,7 @@ class MainWindow extends Component {
             <button
               type="button"
               className="btn-action fa fa-phone"
-              onClick={this.callWithVideo(false)}
+              onClick={this.callWithVideoTest()}
             />
           </div>
         </div>
