@@ -132,7 +132,28 @@ recorder.stopRecording(this.stopRecordingCallback());
 const { peerSrc, localSrc } = this.props;
 this.peerVideo.srcObject = peerSrc;
 }
+
   
+getFrameRates(mediaConstraints) {
+                if(!mediaConstraints.video) {
+                    return mediaConstraints;
+                }
+                //var select = document.querySelector('.media-framerates');
+                var value = '60';
+                if(value == '60') {
+                    return mediaConstraints;
+                }
+                value = parseInt(value);
+                if(DetectRTC.browser.name === 'Firefox') {
+                    mediaConstraints.video.frameRate = value;
+                    return mediaConstraints;
+                }
+                if(!mediaConstraints.video.mandatory) {
+                    mediaConstraints.video.mandatory = {};
+                    mediaConstraints.video.optional = [];
+                }
+                
+            }
 
 
 
