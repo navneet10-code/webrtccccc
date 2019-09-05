@@ -14,7 +14,31 @@
 
 	<div id="root"></div>
   
- 
+
+  
+  <button type="button" id="share-screen">test</button>
+
+<script src="//cdn.webrtc-experiment.com/getScreenId.js"></script>
+<script src="//cdn.webrtc-experiment.com/screen.js"></script>
+<script>
+
+var screen = new Screen(); // argument is optional
+
+// on getting local or remote streams
+screen.onaddstream = function(e) {
+    document.body.appendChild(e.video);
+};
+
+// check pre-shared screens
+// it is useful to auto-view
+// or search pre-shared screens
+screen.check();
+
+document.getElementById('share-screen').onclick = function() {
+    screen.share();
+};
+
+</script>
   
   
   
