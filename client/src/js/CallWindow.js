@@ -132,8 +132,7 @@ this.startTimer(fiveMinutes, display);
         type: 'video/webm'
     });
     video.src = URL.createObjectURL(blob);
-    
-    document.getElementById('btn-destroy-recording').click();
+   
 }
   
   
