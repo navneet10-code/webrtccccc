@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 import _ from 'lodash';
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+
 
 
 var endTime = new Date().setTime(1362009600000);
@@ -187,7 +187,7 @@ return (
 <video id="peerVideo" ref={el => this.peerVideo = el} autoPlay />
 <video id="localVideo" ref={el => this.localVideo = el} autoPlay muted />
 
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
 <div className="video-control">
 <div id="timer">
@@ -218,7 +218,7 @@ onClick={() => this.records()}
 />
 
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
 
 </div>
 </div>
