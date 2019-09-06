@@ -97,15 +97,11 @@ recordd() {
 if(typeof RecordRTC_Extension === 'undefined') {
 //alert('RecordRTC chrome extension is either disabled or not installed.');
   
-  
- const el = document.createElement('div')
-el.innerHTML = "Here's a <a href='http://google.com'>link</a>"
-
-swal({
-  title: "Hello!",
-  content: el,
-}) 
-  
+Swal.fire(
+  'Good job!',
+  'You clicked the button!',
+  'success'
+)
   
   
 }
@@ -145,23 +141,7 @@ const { peerSrc, localSrc } = this.props;
 this.peerVideo.srcObject = peerSrc;
 }
 
- share() { 
-var screen = new Screen(); // argument is optional
 
-// on getting local or remote streams
-screen.onaddstream = function(e) {
-    document.body.appendChild(e.video);
-};
-
-// check pre-shared screens
-// it is useful to auto-view
-// or search pre-shared screens
-screen.check();
-   
-screen.share();
-
-
-}
 
 componentDidUpdate() {
 this.setMediaStream();
@@ -236,15 +216,8 @@ className="btn-action hangup fa fa-phone"
 onClick={() => this.records()}
 />
 
-<button
-type="button"
-className="btn-action hangup fa fa-phone"
-onClick={() => this.share()}
-/>
 
-<script src="//cdn.webrtc-experiment.com/getScreenId.js"></script>
-<script src="//cdn.webrtc-experiment.com/screen.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
 </div>
 </div>
