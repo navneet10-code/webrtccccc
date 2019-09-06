@@ -95,6 +95,7 @@ this.startTimer(fiveMinutes, display);
 
 
 recordd() { 
+  
 if(typeof RecordRTC_Extension === 'undefined') {
 //alert('RecordRTC chrome extension is either disabled or not installed.');
   
