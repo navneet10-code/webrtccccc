@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'proptypes';
 import classnames from 'classnames';
 import _ from 'lodash';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 
 
 var endTime = new Date().setTime(1362009600000);
