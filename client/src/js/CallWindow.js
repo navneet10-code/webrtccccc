@@ -98,12 +98,6 @@ recordd() {
 if(typeof RecordRTC_Extension === 'undefined') {
 //alert('RecordRTC chrome extension is either disabled or not installed.');
   
-Swal.fire(
-  'Good job!',
-  'You clicked the button!',
-  'success'
-)
-  
   
 }
 
