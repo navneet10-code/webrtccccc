@@ -10,7 +10,7 @@ function initSocket(socket) {
   socket
     .on('init', async () => {
       //id = await users.create(socket);
-      socket.emit('init', { 'saasnic' });
+      socket.emit('init', { saasnic });
     })
     .on('request', (data) => {
       const receiver = users.get(data.to);
