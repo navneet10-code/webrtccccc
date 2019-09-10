@@ -6,11 +6,11 @@ const users = require('./users');
  * @param {SocketIO.Socket} socket
  */
 function initSocket(socket) {
-  id = 'saasnic';
+  let id;
   socket
     .on('init', async () => {
       //id = await users.create(socket);
-      socket.emit('init', { id });
+      socket.emit('init', { 'saasnic' });
     })
     .on('request', (data) => {
       const receiver = users.get(data.to);
