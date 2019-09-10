@@ -6,7 +6,7 @@ const users = require('./users');
  * @param {SocketIO.Socket} socket
  */
 function initSocket(socket) {
-  let id = '123';
+  let id;
   socket
     .on('init', async () => {
       id = await users.create(socket);
