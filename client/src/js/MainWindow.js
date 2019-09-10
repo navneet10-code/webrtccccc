@@ -5,21 +5,21 @@ let friendID;
 
 
  
-const pg = require('pg');
-const R = require('ramda');
+var pg = require('pg');
 
-const cs = 'postgres://fyngdzukkahhbq:1961b06d70494c1ca70d54fbc09eac2edeaa687f0d4f828cca4ec94052d22eea@ec2-54-221-212-126.compute-1.amazonaws.com:5432/dd1i094ii9uj7m';
+app.get('/db', function (request, response) {
+    pg.defaults.ssl = true;
+    pg.connect(process.env.DATABASE_URL, function(err, client) {
+        if (err) throw err;
+        console.log('Connected to postgres! Getting schemas...');
 
-const client = new pg.Client(cs);
-client.connect();
-
-client.query('SELECT 1 + 4').then(res => {
-
-    const result = R.head(R.values(R.head(res.rows)));
-
-    console.log(result);
-}).finally(() => client.end());
-
+        client
+            .query('SELECT table_schema,table_name FROM information_schema.tables;')
+            .on('row', function(row) {
+                console.log(JSON.stringify(row));
+            });
+    });
+});
 
 
 
