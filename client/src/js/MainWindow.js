@@ -3,6 +3,32 @@ import PropTypes from 'proptypes';
 
 let friendID;
 
+
+
+let pg = require('pg');
+if (process.env.DATABASE_URL) {
+  pg.defaults.ssl = true;
+}
+
+// include an OR statement if you switch between a local dev db and 
+// a remote heroku environment
+
+let connString = process.env.DATABASE_URL || 'postgres://fyngdzukkahhbq:1961b06d70494c1ca70d54fbc09eac2edeaa687f0d4f828cca4ec94052d22eea@ec2-54-221-212-126.compute-1.amazonaws.com:5432/dd1i094ii9uj7m
+';
+const { Pool } = require('pg');
+
+const pool = new Pool({
+  connectionString : connString
+});
+
+
+
+
+
+
+
+
+
 class MainWindow extends Component {
   /**
    * Start the call with or without video
