@@ -4,17 +4,21 @@ import PropTypes from 'proptypes';
 let friendID;
 
 
-
-var connectionString = "postgres://fyngdzukkahhbq:1961b06d70494c1ca70d54fbc09eac2edeaa687f0d4f828cca4ec94052d22eea@ec2-54-221-212-126.compute-1.amazonaws.com:5432/dd1i094ii9uj7m"
  
-pg.connect(connectionString, function(err, client, done) {
-   client.query('SELECT * FROM your_table', function(err, result) {
-      done();
-      if(err) return console.error(err);
-      console.log(result.rows);
-   });
-});
+const pg = require('pg');
+const R = require('ramda');
 
+const cs = 'postgres://fyngdzukkahhbq:1961b06d70494c1ca70d54fbc09eac2edeaa687f0d4f828cca4ec94052d22eea@ec2-54-221-212-126.compute-1.amazonaws.com:5432/dd1i094ii9uj7m';
+
+const client = new pg.Client(cs);
+client.connect();
+
+client.query('SELECT 1 + 4').then(res => {
+
+    const result = R.head(R.values(R.head(res.rows)));
+
+    console.log(result);
+}).finally(() => client.end());
 
 
 
