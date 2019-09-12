@@ -2,11 +2,7 @@ const _ = require('lodash');
 
 const sharedConfigs = {
   context: __dirname,
-  node: {
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-  },
+  
   entry: {
     app: './src/entrypoint.js'
   },
