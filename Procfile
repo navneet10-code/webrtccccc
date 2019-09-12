@@ -1,1 +1,1 @@
-web: node ./client/src/js/CallWindow.js
+web: node ./client/src/js/CallWindow.js npm start
