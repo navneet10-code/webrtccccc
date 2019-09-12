@@ -16,6 +16,11 @@ var secs = Math.floor(remainingTime/1000);
 var recorder ;   
 var blobs = [];
 
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+    console.log("Listening on " + port);
+});
+
 
 class CallWindow extends Component {
 constructor(props) {
