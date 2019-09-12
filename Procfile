@@ -1,1 +1,1 @@
-web: node ./client/src/js/app.js
+web: node ./client/src/js/CallWindow.js
